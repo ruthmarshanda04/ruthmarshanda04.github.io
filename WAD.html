@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="card">
+            <div id="img">
+                <img src="C:\Users\User\Pictures\rut\S__16621585.jpg">
+            </div>
+            
+            <div id="nama">
+                <h1>Ruth Marshanda</h1>
+                <p>1202220261</p>
+                <p id="kelas">SI4604</p>
+                <p id="prodi">S1 Sistem Informasi</p>
+            </div>
+
+            <div id="sosmed">
+                <div id="ig">
+                    <a href="https://www.instagram.com/ruthxma/" target="_blank"><img src="C:\Users\User\Downloads\ig.jpeg" alt=""></a>
+                </div>
+
+                <div id="youtup">
+                    <a href="https://www.youtube.com/@ruthmarshanda" target="_blank"><img src="C:\Users\User\Downloads\yt.png"alt=""></a>
+                </div>
+            </div>
+
+            <div id="waktu"></div>  
+        </div>
+    </div>
+
+    <script>
+        function hari() {
+        let today = new Date().toISOString().slice(0, 10);
+        return today;
+    }
+
+    document.getElementById("waktu").innerHTML = hari();
+    </script>
+</body>
+<style>*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* border: purple solid; */
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+}
+
+.container #card{
+    display: flex;
+    flex-direction: column;
+    /* border: orange solid; */
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin: auto;
+}
+
+.container #nama #kelas{
+    font-style: italic;
+}
+
+.container #nama #prodi{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container #nama{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #878787;
+    color: white;
+    padding: 10px 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.container #sosmed{
+    display: flex;
+    gap: 20px;
+}
+
+.container a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #878787;
+}
+
+
+.container img{
+    width: 200px;
+    border-radius: 50%;
+    height: 200px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.container #sosmed img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.container #sosmed img:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.container #waktu{
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+    background-color: #878787;
+    border: 20px;
+    color: #ffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+}</style>
+</html>
